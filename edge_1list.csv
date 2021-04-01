@@ -1,0 +1,19 @@
+source,target,weight
+Werner Cohn,Julian Kliemann,1.0
+Werner Cohn,Aby Warburg,1.0
+Werner Cohn,Leo Steinberg,2.5
+Werner Cohn,Richard Krautheimer,2.7
+Werner Cohn,Ulrich Middeldorf,3.9
+Werner Cohn,Kurt Badt,2.2
+Julian Kliemann,Aby Warburg,1.0
+Julian Kliemann,Leo Steinberg,2.6
+Julian Kliemann,Richard Krautheimer,4.3
+Julian Kliemann,Ulrich Middeldorf,1.1
+Julian Kliemann,Kurt Badt,2.0
+Aby Warburg,Leo Steinberg,1.0
+Aby Warburg,Richard Krautheimer,1.0
+Aby Warburg,Ulrich Middeldorf,1.2
+Leo Steinberg,Richard Krautheimer,6.1
+Leo Steinberg,Ulrich Middeldorf,4.6
+Richard Krautheimer,Ulrich Middeldorf,4.8
+Richard Krautheimer,Kurt Badt,1.6
