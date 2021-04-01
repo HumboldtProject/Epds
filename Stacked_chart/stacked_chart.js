@@ -66,8 +66,8 @@ Chart.controllers.groupableHBar = Chart.controllers.horizontalBar.extend({
 
 
 function random_rgba() {
-    var o = Math.round, r = Math.random, s = 255;
-    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ')';
+    var o = ["#f6b6f6", "#e7a2ab", "#ce3650", "#3949c9", "#2b1c31", "#52151f", "#171d50", "#303030", "#e7e7db", "#ccd4df", "#151515", "#9da4e5", "#f4d1d6"];
+    return o[Math.floor(Math.random() * o.length)];
 }
 
 
