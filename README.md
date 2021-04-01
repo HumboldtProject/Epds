@@ -2,8 +2,7 @@
 Site Web for exam  **Electronic Publishing and Digital Storytelling**, DHDK@Unibo, 2020/2021 .
 
 
-
-https://notebooks.gesis.org/binder/jupyter/user/humboldtproject-epds-moj8zwoy/tree **Jupyter Notebook 
+https://hub.gke2.mybinder.org/user/humboldtproject-epds-3cj8wl98/tree **Jupyter Notebook** 
 
 **Gemma Centrone** : Web Development and Data Visualization;
 
