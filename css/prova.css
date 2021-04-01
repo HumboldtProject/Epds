@@ -1,0 +1,78 @@
+@font-face{
+	font-family: 'Baskerville';
+	src: url(../font/LibreBaskerville-Italic.ttf);
+} 
+
+
+img {
+
+width: 70vw;
+height: 90vh;
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+border-radius: 40%;
+
+}
+body {
+margin:0;
+padding:0;
+background-color: #020202;
+
+  justify-content: center;
+}
+
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: auto; /* Gives that scrolling effect as the typing happens */
+    text-align: center;
+    font-size: 40px;
+ font-weight: bolder;
+color:#fff;
+font-family: 'Baskerville';
+  animation: 
+    typing 4.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 20% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: black }
+  50% { border-color: black; }
+}
+
+a{
+text-decoration: none;
+margin-top:10px;
+color: #fff;
+}
+@media screen and (max-width: 1200px){
+img {
+
+width: 100vw;
+height: 50vh;
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+border-radius: 40%;
+
+}
+body {
+margin:0;
+padding:0;
+background-color: #020202;
+
+  justify-content: center;
+}
+
+
+}
