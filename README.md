@@ -1,4 +1,10 @@
 # Epds
+Site Web for exam  **Electronic Publishing and Digital Storytelling**, DHDK@Unibo, 2020/2021 .
+
+
+
+
+
 Gemma Centrone : Web Development and Data Visualization;
 Francesca Genovese: Data Visualization and Data Integration;
 Arianna Moretti: Data Integration, extraction and Data Visualization. 
