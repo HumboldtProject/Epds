@@ -1118,18 +1118,18 @@ overflow: hidden;
 .frainfo{
 color:black;
 
-width: 30%;
+width: 40%;
 position: absolute;
 top:65%;
-left:25%;
+left:15%;
 }
 .arinfo {
 color:black;
 
-width: 30%;
+width: 40%;
 position: absolute;
 top:65%;
-right:20%;
+right:15%;
 
 }
 .geinfo {
