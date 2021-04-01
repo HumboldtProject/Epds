@@ -3,7 +3,7 @@ Site Web for exam  **Electronic Publishing and Digital Storytelling**, DHDK@Unib
 
 
 
-
+https://notebooks.gesis.org/binder/jupyter/user/humboldtproject-epds-moj8zwoy/tree **Jupyter Notebook **
 
 **Gemma Centrone** : Web Development and Data Visualization;
 **Francesca Genovese**: Data Visualization and Data Integration;
