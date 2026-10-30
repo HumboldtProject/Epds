@@ -1169,3 +1169,271 @@ background-color: #020202;
 			text-align: center;
 width: 100%;
 		}
+
+
+/* prima era uno style inline in homepage.html */
+#chartDiv {
+	max-width: 740px;
+	height: 10px;
+	margin-bottom: 35%;
+}
+
+/* elementi visibili solo su mobile */
+.menu-toggle,
+.menu-button,
+.ge-mobile {
+	display: none;
+}
+
+
+/* ==================== Responsive ==================== */
+
+/* tablet e mobile: niente multiscroll, le sezioni sono una sotto l'altra */
+@media (max-width: 1024px) {
+
+	html,
+	body {
+		overflow: auto;
+		background-color: #F6FBF6;
+	}
+
+	/* il body tiene in ordine le sezioni delle due colonne */
+	body {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-items: stretch;
+		padding-top: 50px;
+	}
+
+	#myContainer,
+	.ms-left,
+	.ms-right {
+		display: contents;
+	}
+
+	.ms-section {
+		width: auto;
+		padding: 40px 20px;
+	}
+
+	/* ordine: sinistra 1, destra 1, sinistra 2, destra 2... */
+	#left1 { order: 1; }
+	#right1 { order: 2; }
+	#left2 { order: 3; }
+	#right2 { order: 4; }
+	#left3 { order: 5; }
+	#right3 { order: 6; }
+	#left4 { order: 7; }
+	#right4 { order: 8; }
+	#left5 { order: 9; }
+	#right5 { order: 10; }
+	#left6 { order: 11; }
+	#right6 { order: 12; }
+	#left7 { order: 13; }
+	#right7 { order: 14; }
+	#left8 { order: 15; }
+	#right8 { order: 16; }
+
+	#footer {
+		order: 17;
+	}
+
+	/* stessi colori delle sezioni su desktop */
+	#left1, #right1, #left6, #right6, #left8, #right8 {
+		background-color: #F6FBF6;
+	}
+
+	#left2, #right2, #left5, #right5 {
+		background-color: #E7A2AB;
+	}
+
+	#left3, #right3 {
+		background-color: #CE3650;
+	}
+
+	#left4, #right4, #left7, #right7 {
+		background-color: #2B1C31;
+	}
+
+	/* menu a tendina */
+	.menu-button {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 80;
+		height: 50px;
+		padding: 0 20px;
+		line-height: 50px;
+		background-color: #2B1C31;
+		color: #ffffff;
+		font-family: 'baskerville';
+		font-size: 18px;
+		cursor: pointer;
+	}
+
+	#menu {
+		display: none;
+		top: 50px;
+		height: auto;
+		background-color: #2B1C31;
+	}
+
+	.menu-toggle:checked ~ #menu {
+		display: block;
+	}
+
+	#menu li {
+		display: block;
+		margin: 0;
+		background: none;
+		border-radius: 0;
+		border-top: 1px solid rgba(255,255,255, 0.2);
+	}
+
+	#menu li a {
+		padding: 12px 20px;
+		color: #ffffff;
+	}
+
+	/* su mobile prima il libro, poi la scheda dello storico scelto */
+	#right3 { order: 5; }
+	#left3 { order: 6; }
+
+	/* titoli dell'introduzione: su desktop erano divisi tra le due colonne */
+	h1,
+	.title {
+		float: none;
+		margin: 0;
+		text-align: center;
+	}
+
+	/* testi senza i margini pensati per la mezza colonna */
+	.ms-section p {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.description5,
+	.descrizionee,
+	.description7,
+	.description8,
+	.description9 {
+		margin-bottom: 20px;
+	}
+
+	/* grafici in iframe a tutta larghezza */
+	iframe,
+	.gant,
+	.stacked,
+	.network,
+	.piechart,
+	.bar_chart,
+	.uni {
+		width: 100%;
+		margin: 20px 0;
+		padding: 0;
+	}
+
+	.uni {
+		height: 50vh;
+	}
+
+	/* su tablet libro, grafici e foto non diventano enormi */
+	#mybook,
+	.piechart,
+	.grafici,
+	.grafici1 {
+		display: block;
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#chartDiv {
+		height: auto;
+		margin-bottom: 0;
+	}
+
+	.grafici,
+	.grafici1 {
+		width: 100%;
+	}
+
+	/* la tabella scorre in orizzontale */
+	table {
+		display: block;
+		width: 100%;
+		overflow-x: auto;
+	}
+
+	/* libro: pagine una sotto l'altra, niente istruzioni per sfogliarlo */
+	#mybook > div {
+		margin-bottom: 20px;
+		padding: 20px;
+		background-image: url(../authors/fig2.jpg);
+	}
+
+	#mybook .book-istruzioni {
+		display: none;
+	}
+
+	.librocop {
+		width: 40%;
+		margin-top: 20px;
+	}
+
+	/* crediti: foto e testi nel flusso della pagina */
+	.francesca,
+	.arianna {
+		display: block;
+		float: none;
+		width: 50%;
+		max-width: 200px;
+		margin: 0 auto 10px auto;
+	}
+
+	.frainfo,
+	.arinfo {
+		position: static;
+		width: auto;
+		margin-bottom: 40px;
+	}
+
+	/* footer in fondo alla pagina */
+	#footer {
+		position: static;
+		width: auto;
+	}
+
+	/* crediti: la foto di Gemma intera al posto delle due metà */
+	.ge,
+	.gemma1,
+	.geinfo2 {
+		display: none;
+	}
+
+	.ge-mobile {
+		display: block;
+		margin-top: 40px;
+	}
+
+	.ge-mobile-photo {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.ge-mobile-photo img {
+		width: 40%;
+		max-width: 160px;
+	}
+
+	.ge-mobile p {
+		color: black;
+		margin-top: 10px;
+	}
+}

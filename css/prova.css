@@ -76,3 +76,22 @@ background-color: #020202;
 
 
 }
+
+
+/* ==================== Responsive ==================== */
+
+/* mobile: la scritta "Open Me" deve entrare tutta */
+@media (max-width: 768px) {
+
+  .typewriter h1 {
+    font-size: 30px;
+    animation:
+      typing-mobile 4.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+
+  @keyframes typing-mobile {
+    from { width: 0 }
+    to { width: 50% }
+  }
+}

@@ -1,21 +1,46 @@
 jQuery.noConflict();
  
 jQuery( document ).ready(function(jQuery) {
-            jQuery('#myContainer').multiscroll({
-            	sectionsColor: ['#F6FBF6','#E7A2AB','#CE3650', '#2B1C31','#E7A2AB','#F6FBF6','#2B1C31','#F6FBF6'],
-            	anchors: ['first', 'second', 'third','quarto','quinto','sesto','settimo','ottavo'],
-            	menu: '#menu',
-            	css3: true,
-				responsiveExpand: true,
-	
-        
-				 responsiveWidth: 1200,
-				responsiveHeight: 2000,
-     		
-	
-            });
-        });
 
+	var schermoPiccolo = window.matchMedia("(max-width: 1024px)");
+
+	// se la finestra passa da desktop a tablet (o viceversa) ricarico la pagina,
+	// così multiscroll e libro si accendono o si spengono correttamente
+	schermoPiccolo.addEventListener('change', function () {
+		location.reload();
+	});
+
+	// su tablet e mobile niente multiscroll: le sezioni sono una sotto l'altra
+	if (schermoPiccolo.matches) {
+		var anchors = ['first', 'second', 'third', 'quarto', 'quinto', 'sesto', 'settimo', 'ottavo'];
+
+		// le voci del menu portano alla sezione corrispondente e chiudono la tendina
+		jQuery('#menu a').on('click', function (event) {
+			event.preventDefault();
+			var index = anchors.indexOf(this.hash.substring(1));
+			document.getElementById('left' + (index + 1)).scrollIntoView({ behavior: 'smooth' });
+			document.getElementById('menu-toggle').checked = false;
+		});
+		return;
+	}
+
+	// multiscroll vuole la pagina in cima: dopo un ricaricamento il browser
+	// ripristinerebbe lo scroll della versione mobile e le colonne si sfaserebbero
+	if ('scrollRestoration' in history) {
+		history.scrollRestoration = 'manual';
+	}
+	window.scrollTo(0, 0);
+
+	jQuery('#myContainer').multiscroll({
+		sectionsColor: ['#F6FBF6','#E7A2AB','#CE3650', '#2B1C31','#E7A2AB','#F6FBF6','#2B1C31','#F6FBF6'],
+		anchors: ['first', 'second', 'third','quarto','quinto','sesto','settimo','ottavo'],
+		menu: '#menu',
+		css3: true,
+		responsiveExpand: true,
+		responsiveWidth: 1200,
+		responsiveHeight: 2000,
+	});
+});
 
 
 

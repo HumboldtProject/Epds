@@ -1,6 +1,11 @@
 jQuery.noConflict();
    
  jQuery(function() {
+	// su tablet e mobile il libro non si sfoglia: le pagine sono una sotto l'altra
+	if (window.matchMedia("(max-width: 1024px)").matches) {
+		return;
+	}
+
 	jQuery('#mybook').booklet({
 		manual: true,
      arrows: true,
@@ -35,6 +40,11 @@ function openCity(evt, cityName) {
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
+
+  // su tablet e mobile la scheda è sotto il libro: ci porto l'utente
+  if (window.matchMedia("(max-width: 1024px)").matches) {
+    document.getElementById(cityName).scrollIntoView({ behavior: 'smooth' });
+  }
 
 
 

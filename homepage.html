@@ -2,6 +2,7 @@
 
 
 <head>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -25,8 +26,8 @@
 	
 	<script type="text/javascript" src="./booklet/jquery.booklet.latest.js"></script>
 	<script type="text/javascript" src="./booklet/js.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/jquery.multiscroll.css" />
 	<link rel="stylesheet" type="text/css" href="./css/css.css" />		
-	<link rel="stylesheet" type="text/css" href="./css/jquery.multiscroll.css" />		
 
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.2/d3.min.js"></script>
 	
@@ -53,6 +54,10 @@
 					
 						</div>
 
+
+<!-- Menu a tendina (visibile solo su mobile) -->
+<input type="checkbox" id="menu-toggle" class="menu-toggle"/>
+<label for="menu-toggle" class="menu-button">☰ Menu</label>
 
 <ul id="menu">
 	<li data-menuanchor="first"><a href="#first">Introduction</a></li>
@@ -372,7 +377,7 @@ The Department stands out for the deep - but also broad - understanding of its s
 		</div>
 
 		<div class="ms-section" id="left4">
-	<div id="chartDiv" style="max-width: 740px; height:10px;margin-bottom:35%;">
+	<div id="chartDiv">
       <iframe class="gant" src="./gantt_chart_ok/index.html"></iframe>
 
 
@@ -432,6 +437,15 @@ The wide coverage of different historical periods is confirmed by the fact that 
 Graduated in  Communication Siena. I'm currently attending  Knowledge Master Degree  of Bologna. Contacts:
 </p>
 		</div>
+
+<!-- Foto e testo interi di Gemma: su desktop sono divisi tra le due colonne, su mobile si vede questa versione -->
+<div class="ge-mobile">
+	<div class="ge-mobile-photo">
+		<img src="./images/gemma (7).png">
+		<img src="./images/gemma (8).png">
+	</div>
+	<p>Graduated in Communication Science at the University of Siena. I'm currently attending the Digital Humanities and Digital Knowledge Master Degree course at the University of Bologna. Contacts: gemma.centrone@studio.unibo.it</p>
+</div>
 	</div>
 	</div>
 
@@ -472,7 +486,7 @@ Graduated in  Communication Siena. I'm currently attending  Knowledge Master Deg
 
 <img class="librocop" src="./images/book.png">
 </div>
-<div>
+<div class="book-istruzioni">
 <p class="description4">Use your <b>keyboard arrow keys</b> to turn the pages and click on the <b>historians’ names</b> or on the writing <b>'Find More'</b> to know more about their careers, biographies, and collections!
 </p>
 <img  class="frecce" src="./images/arrowfinal.jpg">
